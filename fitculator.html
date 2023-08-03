@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fitculator</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/7d10e346b5.js" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+            <img src="images/pink_icon.png" class="d-inline-block align-top" alt="pink_icon">
+            FITCULATOR
+        </a>
+    </nav>
+
+    <section id="calculator">
+        <div class="calculator">
+            <div class="calculator-options">
+                <div class="calculator-buttons">
+                    <button id="bmi" type="button" class="btn choice-btn">BMI</button>
+                    <button id="ppm" type="button" class="btn choice-btn">PPM</button>
+                    <button id="cpm" type="button" class="btn choice-btn">CPM</button>
+                    <button id="homa1" type="button" class="btn choice-btn">HOMA (mmol/l)</button>
+                    <button id="homa2" type="button" class="btn choice-btn">HOMA (mg/dl)</button>
+                </div>
+            </div>
+            <div class="row calculator-window">
+                <div class="calculator-info col-7">
+                    <div id="info-bmi" class="info el-hidden">
+                        <h2>BMI - Body Mass Index</h2>
+                        <p>BMI = masa / wzrost^2</p>
+                        <p>Zakresy: </p>
+                        <ul class="">
+                            <li class="list-element">poniżej 16 — wygłodzenie</li>
+                            <li class="list-element">16-16,9 — wychudzenie</li>
+                            <li class="list-element">17-18,5 — niedowaga</li>
+                            <li class="list-element">18,5-24,9 — prawidłowa masa ciała</li>
+                            <li class="list-element">25-29,9 — nadwaga</li>
+                            <li class="list-element">30-34,9 — otyłość I stopnia</li>
+                            <li class="list-element">35-39,9 — otyłość kliniczna (inaczej otyłość II stopnia)</li>
+                            <li class="list-element">powyżej 40 — otyłość skrajna (inaczej otyłość III stopnia)</li>
+                        </ul>
+                    </div>
+                    <div id="info-ppm" class="info el-hidden">
+                        <h2>PPM - Podstawowa przemiana Materii</h2>
+                        <p>Wzory: </p>
+                        <ul class="">
+                            <li class="list-element">Wzór dla kobiet: 655,1 + (9,563 x masa ciała wyrażona w
+                                kilogramach) + (1,85 x wzrost wyrażony w centymetrach) – (4,676 x wiek wyrażony w
+                                latach)</li>
+                            <li class="list-element">Wzór dla mężczyzn: 66,5 + (13,75 x masa ciała wyrażona w
+                                kilogramach) + (5,003 x wzrost wyrażony w centymetrach) – (6,775 x wiek wyrażony w
+                                latach)</li>
+                        </ul>
+                    </div>
+                    <div id="info-cpm" class="info el-visible">
+                        <h2>CPM - Całkowita Przemiana Materii</h2>
+                        <p>Współczynnik PAL:</p>
+                        <li class="list-element">1,4 – siedzący tryb życia. Brak regularnej aktywności fizycznej, typowe
+                            dzienne zajęcia niewymagające dużego wysiłku</li>
+                        <li class="list-element">1,6 – niska aktywność fizyczna. Do aktywności typowej dla siedzącego
+                            trybu życia dochodzi 30-60 minut umiarkowanego wysiłku fizycznego</li>
+                        <li class="list-element">1,8 – umiarkowana aktywność fizyczna. Co najmniej godzinny wysiłek o
+                            średnim stopniu nasilenia kilka razy w tygodniu</li>
+                        <li class="list-element">2,0 – umiarkowana aktywność fizyczna. Co najmniej godzinny wysiłek o
+                            średnim stopniu nasilenia każdego dnia lub wykonywanie pracy fizycznej</li>
+                        <li class="list-element">2,2 – aktywny tryb życia. Minimum 60-minutowy wysiłek o średnim stopniu
+                            nasilenia każdego dnia i co najmniej godzina energicznej aktywności fizycznej</li>
+                        <li class="list-element">2,4 – ekstremalnie wysoka aktywność fizyczna, np. wyczynowe uprawianie
+                            sportu</li>
+                    </div>
+                    <div id="info-homa1" class="info el-hidden">
+                        <h2>Wskaźnik HOMA (mmol/l)</h2>
+                        <p>R= Insulinemia na czczo (mU/ml) x glikemia na czczo (mmol/l)/22,5</p>
+                        <p>Interpretacja wyniku:</p>
+                        <li class="list-element">&lt; 1-2 - wynik prawidłowy</li>
+                        <li class="list-element">&gt; 2 - wynik nieprawidłowy oznaczający insulinooporność</li>
+                    </div>
+                    <div id="info-homa2" class="info el-hidden">
+                        <h2>Wskaźnik HOMA (mg/dl)</h2>
+                        <p>R= Insulinemia na czczo (mU/ml) x glikemia na czczo (mg/dl) / 405</p>
+                        <p>Interpretacja wyniku:</p>
+                        <li class="list-element">&lt; 1-2 - wynik prawidłowy</li>
+                        <li class="list-element">&gt; 2 - wynik nieprawidłowy oznaczający insulinooporność</li>
+                    </div>
+                </div>
+                <div class="calculator-empty col-1">
+                </div>
+                <div class="calculator-calculate col-4">
+                    <div id="form-bmi" class="calc-form el-hidden">
+                        <form>
+                            <div class="form-field">
+                                <label for="height" class="form-label">Wzrost</label>
+                                <input id="height-bmi" type="number" class="form-input form-control"
+                                    placeholder="Wzrost w centymetrach">
+                            </div>
+                            <div class="form-field">
+                                <label for="weight" class="form-label">Waga</label>
+                                <input id="weight-bmi" type="number" class="form-input form-control" placeholder="Waga w kilogramach">
+                            </div>
+
+                            <div class="result-field">
+                                <button type="submit" class="btn submit-btn" id="btn-bmi">Oblicz</button>
+                                <p class="result-text" id="result-bmi"></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="form-ppm" class="calc-form el-hidden">
+                        <form>
+                            <div class="form-field">
+                                <label for="height" class="form-label">Wzrost</label>
+                                <input id="height-ppm" type="number" class="form-input form-control"
+                                    placeholder="Wzrost w centymetrach">
+                            </div>
+                            <div class="form-field">
+                                <label for="weight" class="form-label">Waga</label>
+                                <input id="weight-ppm" type="number" class="form-input form-control" placeholder="Waga w kilogramach">
+                            </div>
+                            <div class="form-field">
+                                <label for="age" class="form-label">Wiek</label>
+                                <input id="age-ppm" type="number" class="form-input form-control" placeholder="Wiek w latach">
+                            </div>
+                            <div class="form-field">
+                                <label for="sex" class="form-label">Płeć</label>
+                                <select id="sex-ppm" type="text" class="form-control form-input">
+                                    <option class="form-input">Kobieta</option>
+                                    <option class="form-input">Mężczyzna</option>
+                                </select>
+                            </div>
+
+                            <div class="result-field">
+                                <button type="submit" class="btn submit-btn" id="btn-ppm">Oblicz</button>
+                                <p class="result-text" id="result-ppm"></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="form-cpm" class="calc-form el-visible">
+                        <form>
+                            <div class="form-field">
+                                <label for="height" class="form-label">Wzrost</label>
+                                <input id="height-cpm" type="number" class="form-input form-control"
+                                    placeholder="Wzrost w centymetrach">
+                            </div>
+                            <div class="form-field">
+                                <label for="weight" class="form-label">Waga</label>
+                                <input id="weight-cpm" type="number" class="form-input form-control" placeholder="Waga w kilogramach">
+                            </div>
+                            <div class="form-field">
+                                <label for="age" class="form-label">Wiek</label>
+                                <input id="age-cpm" type="number" class="form-input form-control" placeholder="Wiek w latach">
+                            </div>
+                            <div class="form-field">
+                                <label for="sex" class="form-label">Płeć</label>
+                                <select id="sex-cpm" type="text" class="form-control form-input">
+                                    <option class="form-input">Kobieta</option>
+                                    <option class="form-input">Mężczyzna</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label id="pal-cpm" for="pal" class="form-label">Współczynnik PAL</label>
+                                <select type="number" class="form-control form-input">
+                                    <option class="form-input">1,4</option>
+                                    <option class="form-input">1,6</option>
+                                    <option class="form-input">1,8</option>
+                                    <option class="form-input">2,0</option>
+                                    <option class="form-input">2,2</option>
+                                    <option class="form-input">2,4</option>
+                                </select>
+                            </div>
+                            <div class="result-field">
+                                <button type="submit" class="btn submit-btn" id="btn-cpm">Oblicz</button>
+                                <p class="result-text" id="result-cpm"></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="form-homa1" class="calc-form el-hidden">
+                        <form>
+                            <div class="form-field">
+                                <label for="insuline" class="form-label">Insulina na czczo (mmol/l)</label>
+                                <input id="insuline-homa1" type="number" class="form-input form-control">
+                            </div>
+                            <div class="form-field">
+                                <label for="glucose" class="form-label">Glukoza na czczo (mU/ml)</label>
+                                <input id="glucose-homa1" type="number" class="form-input form-control">
+                            </div>
+
+                            <div class="result-field">
+                                <button type="submit" class="btn submit-btn" id="btn-homa1">Oblicz</button>
+                                <p class="result-text" id="result-homa1"></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="form-homa2" class="calc-form el-hidden">
+                        <form>
+                            <div class="form-field">
+                                <label for="insuline" class="form-label">Insulina na czczo (mg/dl)</label>
+                                <input id="insuline-homa2" type="number" class="form-input form-control">
+                            </div>
+                            <div class="form-field">
+                                <label for="glucose" class="form-label">Glukoza na czczo (mU/ml)</label>
+                                <input id="glucose-homa2" type="number" class="form-input form-control">
+                            </div>
+
+                            <div class="result-field">
+                                <button type="submit" class="btn submit-btn" id="btn-homa2">Oblicz</button>
+                                <p class="result-text" id="result-homa2"></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer class="footbar" id="footer">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://www.google.com/">
+                <i class="fa-brands fa-instagram fa-xl footer-icon"></i>
+            </a>
+            © Copyright 2023
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="scripts.js"></script>
+</body>
+
+
+</html>

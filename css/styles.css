@@ -1,0 +1,179 @@
+body
+{
+    background-color: #F0F0F0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+
+}
+
+h2
+{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+/* Navbar */
+.navbar
+{
+    background-color: #4C5357;
+    
+}
+
+.navbar-brand
+{
+    color: rgb(168, 198, 159);
+    font-size: 1.5rem;
+    padding: 15px 18px;  
+}
+
+/*Calculator */
+
+.btn
+{
+    font-weight: 900;
+}
+
+.calculator
+{
+    margin: 0px 50px;
+}
+
+.calculator-empty
+{
+    background-color: none;
+    padding: 10px 20px;
+    height: 100%;
+}
+
+.calculator-info
+{
+    background-color: rgb(168, 198, 159, 0.3);
+    padding: 10px 20px;
+    height: 100%;
+    margin-right: -5%;
+    margin-left: 2%;
+    color: black;
+}
+
+.calculator-calculate
+{
+    background-color: rgb(92, 93, 141, 0.3);
+    padding: 10px 20px;
+    height: 100%;
+}
+
+.calculator-window
+{
+    margin: 40px 30px;
+    height: 450px;
+}
+
+.calculator-options
+{
+    text-align: center;
+    background-color: #CCE2A3;
+    margin: 10px 0px;
+}
+
+.calculator-buttons
+{
+    margin: 1.4rem 0 0;
+    text-align: center;
+}
+
+.choice-btn
+{
+    background-color: #CCE2A3;
+    color: #252422;
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 10px 10px;
+}
+
+.choice-btn:hover
+{
+    background-color: #A8C69F;
+}
+
+.info
+{
+    font-family: 'Montserrat', sans-serif;
+    color: #252422;
+    font-size: 1rem;
+}
+
+.form-field
+{
+    margin-bottom: 1rem;
+}
+
+.form-input
+{
+    font-weight: 900;
+}
+
+.el-hidden
+{
+    display: none;
+    visibility: hidden;
+}
+
+.el-visible
+{
+    display: block;
+    visibility: visible;
+}
+
+.list-element
+{
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.submit-btn
+{
+    background-color: rgb(92, 93, 141, 0.5);
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 20px 0;
+
+}
+
+.submit-btn:hover
+{
+    border-color: rgb(92, 93, 141, 0.9);
+}
+
+.result-field
+{
+    font-size: 2rem;
+    margin: 20px 0 0;
+}
+
+.result-text
+{
+    display: inline-block;
+    float: right;
+    margin: 20px 0 0;
+}
+
+/* Footer */
+.footbar
+{
+    background-color: #4C5357;
+    padding: 15px 18px;
+    color: rgb(168, 198, 159);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.footer-icon
+{
+    margin: 0 15px 0;
+}
