@@ -118,11 +118,11 @@
                             <div class="form-field">
                                 <label for="height" class="form-label">Wzrost</label>
                                 <input id="height-bmi" type="number" class="form-input form-control"
-                                    placeholder="Wzrost w centymetrach">
+                                    placeholder="Wzrost w centymetrach" required>
                             </div>
                             <div class="form-field">
                                 <label for="weight" class="form-label">Waga</label>
-                                <input id="weight-bmi" type="number" class="form-input form-control" placeholder="Waga w kilogramach">
+                                <input id="weight-bmi" type="number" class="form-input form-control" placeholder="Waga w kilogramach" required>
                             </div>
 
                             <div class="result-field">
@@ -136,15 +136,15 @@
                             <div class="form-field">
                                 <label for="height" class="form-label">Wzrost</label>
                                 <input id="height-ppm" type="number" class="form-input form-control"
-                                    placeholder="Wzrost w centymetrach">
+                                    placeholder="Wzrost w centymetrach" required>
                             </div>
                             <div class="form-field">
                                 <label for="weight" class="form-label">Waga</label>
-                                <input id="weight-ppm" type="number" class="form-input form-control" placeholder="Waga w kilogramach">
+                                <input id="weight-ppm" type="number" class="form-input form-control" placeholder="Waga w kilogramach" required>
                             </div>
                             <div class="form-field">
                                 <label for="age" class="form-label">Wiek</label>
-                                <input id="age-ppm" type="number" class="form-input form-control" placeholder="Wiek w latach">
+                                <input id="age-ppm" type="number" class="form-input form-control" placeholder="Wiek w latach" required>
                             </div>
                             <div class="form-field">
                                 <label for="sex" class="form-label">Płeć</label>
@@ -165,15 +165,15 @@
                             <div class="form-field">
                                 <label for="height" class="form-label">Wzrost</label>
                                 <input id="height-cpm" type="number" class="form-input form-control"
-                                    placeholder="Wzrost w centymetrach">
+                                    placeholder="Wzrost w centymetrach" required>
                             </div>
                             <div class="form-field">
                                 <label for="weight" class="form-label">Waga</label>
-                                <input id="weight-cpm" type="number" class="form-input form-control" placeholder="Waga w kilogramach">
+                                <input id="weight-cpm" type="number" class="form-input form-control" placeholder="Waga w kilogramach" required>
                             </div>
                             <div class="form-field">
                                 <label for="age" class="form-label">Wiek</label>
-                                <input id="age-cpm" type="number" class="form-input form-control" placeholder="Wiek w latach">
+                                <input id="age-cpm" type="number" class="form-input form-control" placeholder="Wiek w latach" required>
                             </div>
                             <div class="form-field">
                                 <label for="sex" class="form-label">Płeć</label>
@@ -183,14 +183,14 @@
                                 </select>
                             </div>
                             <div class="form-field">
-                                <label id="pal-cpm" for="pal" class="form-label">Współczynnik PAL</label>
-                                <select type="number" class="form-control form-input">
-                                    <option class="form-input">1,4</option>
-                                    <option class="form-input">1,6</option>
-                                    <option class="form-input">1,8</option>
-                                    <option class="form-input">2,0</option>
-                                    <option class="form-input">2,2</option>
-                                    <option class="form-input">2,4</option>
+                                <label for="pal" class="form-label">Współczynnik PAL</label>
+                                <select id="pal-cpm" type="number" class="form-control form-input">
+                                    <option class="form-input">1.4</option>
+                                    <option class="form-input">1.6</option>
+                                    <option class="form-input">1.8</option>
+                                    <option class="form-input">2.0</option>
+                                    <option class="form-input">2.2</option>
+                                    <option class="form-input">2.4</option>
                                 </select>
                             </div>
                             <div class="result-field">
@@ -203,11 +203,11 @@
                         <form>
                             <div class="form-field">
                                 <label for="insuline" class="form-label">Insulina na czczo (mmol/l)</label>
-                                <input id="insuline-homa1" type="number" class="form-input form-control">
+                                <input id="insuline-homa1" type="number" class="form-input form-control" required>
                             </div>
                             <div class="form-field">
                                 <label for="glucose" class="form-label">Glukoza na czczo (mU/ml)</label>
-                                <input id="glucose-homa1" type="number" class="form-input form-control">
+                                <input id="glucose-homa1" type="number" class="form-input form-control" required>
                             </div>
 
                             <div class="result-field">
@@ -220,11 +220,11 @@
                         <form>
                             <div class="form-field">
                                 <label for="insuline" class="form-label">Insulina na czczo (mg/dl)</label>
-                                <input id="insuline-homa2" type="number" class="form-input form-control">
+                                <input id="insuline-homa2" type="number" class="form-input form-control" required>
                             </div>
                             <div class="form-field">
                                 <label for="glucose" class="form-label">Glukoza na czczo (mU/ml)</label>
-                                <input id="glucose-homa2" type="number" class="form-input form-control">
+                                <input id="glucose-homa2" type="number" class="form-input form-control" required>
                             </div>
 
                             <div class="result-field">
